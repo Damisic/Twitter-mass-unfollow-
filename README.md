@@ -1,17 +1,4 @@
-X Mass Unfollow Tool Build
-12,222 tokens
 
-Model 9:04 AM
-ThinkingThoughts
-Expand to view model thoughts
-
-chevron_right
-The reason it likely didn't work is that X (Twitter) uses "Virtual Scrolling." This means the website only loads about 10–15 people on the screen at a time. If you tell the script to unfollow 50, but only 10 are visible, it gets stuck.
-Also, X frequently changes their internal button IDs.
-Here is an updated, more robust version of the content.js. It includes Auto-Scrolling (to find more people) and better error checking.
-Updated content.js
-Replace your old content.js with this code. I have added comments to explain how it handles X's dynamic layout.
-code
 JavaScript
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "START_UNFOLLOW") {
